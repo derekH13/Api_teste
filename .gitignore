@@ -1,6 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,django
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,django
-
 ### Django ###
 *.log
 *.pot
@@ -115,9 +112,11 @@ ipython_config.py
 
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
 #   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
@@ -260,3 +259,5 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
+
+# End of https://www.toptal.com/developers/gitignore/api/python,django
