@@ -133,4 +133,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ORIGINS = [
     'http://localhost:8080',
+    "http://127.0.0.1:5500",  # Adicione o endereço de onde o frontend está sendo servido
+    "http://localhost:5500",
+    "https://derek765.pythonanywhere.com",
 ]
+
+CORS_ALLOW_ALL_ORIGINS = True
