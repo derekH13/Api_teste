@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-thl+7it@6cd18i#8snkv_ri#(yzrkr27g35ke#jb$h9%s4+d+1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['derek765.pythonanywhere.com']
+ALLOWED_HOSTS = ['derek765.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,7 +51,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'api_root.urls'
@@ -128,7 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-#usar se der problema no react
+# usar se der problema no react
 # CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_ORIGINS = [
@@ -137,5 +137,3 @@ CORS_ALLOW_ORIGINS = [
     "http://localhost:5500",
     "https://derek765.pythonanywhere.com",
 ]
-
-CORS_ALLOW_ALL_ORIGINS = True
